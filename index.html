@@ -1,0 +1,522 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="description" content="AI Project Lead specializing in Microsoft Copilot automation, CRM data workflows, and advanced process optimization." />
+  <meta name="theme-color" content="#0b1220" />
+  <meta property="og:title" content="Portfolio — AI Automation Project Lead" />
+  <meta property="og:description" content="Microsoft Copilot Automation Specialist • CRM Workflow Engineer • AI-driven process optimization." />
+  <meta property="og:type" content="website" />
+  <title>Portfolio — AI Automation Project Lead</title>
+
+  <style>
+    :root{
+      --bg:#0b1220;
+      --panel:#0f1a33;
+      --panel2:#0c1730;
+      --text:#e8eefc;
+      --muted:#a7b4d6;
+      --brand:#7c5cff;
+      --brand2:#34d399;
+      --border:rgba(255,255,255,.10);
+      --shadow: 0 18px 50px rgba(0,0,0,.35);
+      --radius:18px;
+      --mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+      --sans: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji","Segoe UI Emoji";
+    }
+    [data-theme="light"]{
+      --bg:#f6f8ff;
+      --panel:#ffffff;
+      --panel2:#ffffff;
+      --text:#0b1220;
+      --muted:#465173;
+      --brand:#5b4bff;
+      --brand2:#0ea5e9;
+      --border:rgba(10,15,25,.10);
+      --shadow: 0 18px 50px rgba(12,18,32,.12);
+    }
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{
+      margin:0;
+      background: radial-gradient(1200px 700px at 15% -10%, rgba(124,92,255,.35), transparent 55%),
+                  radial-gradient(900px 600px at 90% 0%, rgba(52,211,153,.22), transparent 60%),
+                  var(--bg);
+      color:var(--text);
+      font-family:var(--sans);
+      line-height:1.5;
+    }
+    a{color:inherit}
+    .wrap{max-width:1100px;margin:0 auto;padding:28px 18px 80px}
+
+    /* Topbar */
+    .topbar{
+      position:sticky;top:0;z-index:20;
+      backdrop-filter: blur(10px);
+      background: linear-gradient(to bottom, rgba(11,18,32,.88), rgba(11,18,32,.55));
+      border-bottom:1px solid var(--border);
+    }
+    [data-theme="light"] .topbar{
+      background: linear-gradient(to bottom, rgba(246,248,255,.92), rgba(246,248,255,.65));
+    }
+    .topbar .inner{max-width:1100px;margin:0 auto;padding:14px 18px;display:flex;gap:14px;align-items:center;justify-content:space-between}
+    .brand{display:flex;gap:10px;align-items:center;text-decoration:none}
+    .logo{
+      width:38px;height:38px;border-radius:12px;
+      background: linear-gradient(135deg, var(--brand), var(--brand2));
+      box-shadow: 0 10px 24px rgba(124,92,255,.22);
+      display:grid;place-items:center;
+      font-weight:800;
+      letter-spacing:.5px;
+    }
+    .brand strong{font-size:14px}
+    .brand span{display:block;font-size:12px;color:var(--muted)}
+    nav{display:flex;gap:14px;align-items:center;flex-wrap:wrap;justify-content:flex-end}
+    nav a{
+      text-decoration:none;font-size:13px;color:var(--muted);
+      padding:8px 10px;border-radius:12px;
+      transition:.18s transform,.18s background,.18s color;
+    }
+    nav a:hover{color:var(--text);background:rgba(124,92,255,.10);transform:translateY(-1px)}
+    .btn{
+      border:1px solid var(--border);
+      background:rgba(255,255,255,.06);
+      color:var(--text);
+      padding:9px 12px;border-radius:14px;font-size:13px;cursor:pointer;
+      transition:.18s transform,.18s background,.18s border-color;
+    }
+    .btn:hover{transform:translateY(-1px);background:rgba(124,92,255,.14)}
+    .btn.primary{
+      border-color:transparent;
+      background:linear-gradient(135deg,rgba(124,92,255,.95),rgba(52,211,153,.90));
+      color:#06101f;font-weight:700;
+    }
+
+    /* HERO */
+    .hero{
+      padding:54px 0 24px;
+      display:grid;
+      grid-template-columns:1.1fr .9fr;
+      gap:22px;
+      align-items:stretch;
+    }
+    @media(max-width:880px){ .hero{grid-template-columns:1fr} }
+    .card{
+      background:linear-gradient(180deg,rgba(255,255,255,.06),rgba(255,255,255,.03));
+      border:1px solid var(--border);
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+    }
+    .hero .left{padding:26px}
+    .kicker{
+      display:inline-flex;gap:10px;align-items:center;
+      font-family:var(--mono);font-size:12px;color:var(--muted);
+      padding:7px 10px;border-radius:999px;
+      border:1px solid var(--border);
+      background:rgba(255,255,255,.04);
+    }
+    .dot{width:9px;height:9px;border-radius:50%;background:var(--brand2)}
+    h1{margin:14px 0 10px;font-size:44px;line-height:1.06;letter-spacing:-.02em}
+    @media(max-width:520px){h1{font-size:36px}}
+    .lead{
+      color:var(--muted);margin:0 0 18px;font-size:15.5px;max-width:60ch;
+    }
+    .cta{display:flex;gap:10px;flex-wrap:wrap;align-items:center}
+    .meta{margin-top:18px;display:flex;flex-wrap:wrap;gap:10px;color:var(--muted);font-size:13px}
+    .pill{padding:7px 10px;border-radius:999px;border:1px solid var(--border);background:rgba(255,255,255,.04)}
+
+    .hero .right{padding:18px;display:grid;gap:12px}
+    .profile{
+      display:grid;grid-template-columns:92px 1fr;gap:14px;
+      padding:14px;border-radius:16px;border:1px solid var(--border);
+      background:rgba(255,255,255,.04);
+    }
+    .avatar{
+      width:92px;height:92px;border-radius:16px;
+      background:linear-gradient(135deg,rgba(124,92,255,.95),rgba(52,211,153,.85));
+      display:grid;place-items:center;
+      font-size:18px;font-weight:800;color:#06101f;
+    }
+    .quick{padding:14px;border-radius:16px;border:1px solid var(--border);background:rgba(255,255,255,.03)}
+    .chips{display:flex;gap:8px;flex-wrap:wrap}
+    .chip{
+      font-size:12.5px;padding:7px 10px;border-radius:999px;
+      border:1px solid var(--border);background:rgba(124,92,255,.12);
+    }
+
+    /* Sections */
+    section{padding:26px 0 0}
+    .sec-head{display:flex;justify-content:space-between;align-items:baseline;margin:34px 0 14px}
+    .grid{display:grid;grid-template-columns:repeat(12,1fr);gap:14px}
+    .col-6{grid-column:span 6}
+    .col-4{grid-column:span 4}
+    .col-8{grid-column:span 8}
+    .col-12{grid-column:span 12}
+    @media(max-width:900px){
+      .col-6,.col-4,.col-8{grid-column:span 12}
+    }
+    .panel{padding:16px;border-radius:18px;border:1px solid var(--border);background:rgba(255,255,255,.03)}
+
+    /* Projects */
+    .project{
+      padding:16px;border-radius:18px;border:1px solid var(--border);
+      background:linear-gradient(180deg,rgba(255,255,255,.05),rgba(255,255,255,.02));
+      position:relative;overflow:hidden;
+    }
+    .project:hover{transform:translateY(-2px);border-color:rgba(124,92,255,.38)}
+    .tag{font-size:12px;padding:6px 9px;border-radius:999px;border:1px solid var(--border);background:rgba(255,255,255,.03)}
+
+    /* Timeline */
+    .timeline{display:grid;gap:12px}
+    .t-item{display:grid;grid-template-columns:120px 1fr;gap:12px}
+    @media(max-width:520px){.t-item{grid-template-columns:1fr}}
+    .t-when{color:var(--muted);font-family:var(--mono);font-size:12px}
+    .t-what{padding:12px 14px;border:1px solid var(--border);border-radius:16px;background:rgba(255,255,255,.03)}
+
+    /* Contact */
+    form{display:grid;gap:10px}
+    .row{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+    @media(max-width:640px){.row{grid-template-columns:1fr}}
+    input, textarea{
+      width:100%;padding:12px;border-radius:14px;border:1px solid var(--border);
+      background:rgba(255,255,255,.04);color:var(--text);
+    }
+    textarea{min-height:120px}
+    input:focus,textarea:focus{
+      border-color:rgba(124,92,255,.55);
+      box-shadow:0 0 0 4px rgba(124,92,255,.18);
+    }
+    .footer{margin-top:30px;padding-top:18px;border-top:1px solid var(--border);display:flex;justify-content:space-between;color:var(--muted);font-size:13px;flex-wrap:wrap}
+    .sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0)}
+  </style>
+</head>
+
+<body data-theme="dark">
+  <header class="topbar">
+    <div class="inner">
+      <a class="brand" href="#top">
+        <div class="logo">AI</div>
+        <div><strong>AI Automation Lead</strong><span>Portfolio</span></div>
+      </a>
+
+      <nav>
+        <a href="#about">About</a>
+        <a href="#projects">Projects</a>
+        <a href="#experience">Experience</a>
+        <a href="#contact">Contact</a>
+        <button id="themeBtn" class="btn" type="button">🌓</button>
+        <a class="btn primary" href="#contact">Hire me</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="top" class="wrap">
+
+    <!-- HERO -->
+    <section class="hero">
+      <div class="card left">
+        <div class="kicker"><span class="dot"></span><span>AI Automation + CRM Systems</span></div>
+
+        <h1>Hi, I’m <span style="background:linear-gradient(135deg,var(--brand),var(--brand2));-webkit-background-clip:text;color:transparent">Your Name</span>.</h1>
+
+        <p class="lead">
+          AI Project Lead specializing in Microsoft Copilot agent deployment, CRM workflow optimization,
+          and high-volume data automation. I design and implement AI-driven systems that reduce manual workload,
+          improve data integrity, and accelerate operational decision-making.
+        </p>
+
+        <div class="cta">
+          <a class="btn primary" href="#projects">See projects</a>
+          <a class="btn" href="#contact">Contact</a>
+          <a class="btn" target="_blank" href="https://github.com/">GitHub</a>
+          <a class="btn" target="_blank" href="https://www.linkedin.com/">LinkedIn</a>
+        </div>
+
+        <div class="meta">
+          <span class="pill">📍 Philippines</span>
+          <span class="pill">💼 AI / Automation / CRM</span>
+          <span class="pill">⚡ AI Workflow Architect</span>
+        </div>
+      </div>
+
+      <aside class="card right">
+        <div class="profile">
+          <div class="avatar">AI</div>
+          <div>
+            <h2>Your Name</h2>
+            <p>
+              <strong>Role:</strong> AI Project Lead / Automation Specialist<br/>
+              <strong>Email:</strong> you@example.com<br/>
+              <strong>Expertise:</strong> Copilot Agents, CRM Data, SQL, Excel Automation
+            </p>
+          </div>
+        </div>
+
+        <div class="quick">
+          <h3>Skills</h3>
+          <div class="chips">
+            <span class="chip">Microsoft Copilot</span>
+            <span class="chip">CRM Platforms</span>
+            <span class="chip">Excel Automation</span>
+            <span class="chip">SQL</span>
+            <span class="chip">AI Workflow Design</span>
+            <span class="chip">Process Optimization</span>
+            <span class="chip">Technical Documentation</span>
+          </div>
+        </div>
+
+        <div class="quick">
+          <h3>Highlights</h3>
+          <div class="chips">
+            <span class="chip">Email Summarization Automation</span>
+            <span class="chip">Excel Template AI Generator</span>
+            <span class="chip">CRM Data Integrity Boost</span>
+            <span class="chip">Cross-functional Leadership</span>
+          </div>
+        </div>
+      </aside>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about">
+      <div class="sec-head">
+        <h2>About</h2>
+        <p>Who I am and what I do</p>
+      </div>
+
+      <div class="grid">
+        <div class="panel col-8">
+          <h3>Professional Summary</h3>
+          <p>
+            I am a results-oriented AI Project Lead with hands-on expertise in Microsoft Copilot automation,
+            CRM database management, and high-volume data workflow engineering. I specialize in developing
+            AI-powered agents that streamline business processes, reduce manual bottlenecks, and enhance
+            data accuracy across large operational teams.
+          </p>
+          <p>
+            My work focuses on integrating intelligent systems into everyday business functions—
+            transforming long email threads into instant summaries, generating dynamic Excel templates,
+            and improving CRM data ingestion using AI and automation.
+          </p>
+          <p>
+            I thrive in roles that combine problem-solving, system architecture, and collaboration across
+            business and IT units.
+          </p>
+        </div>
+
+        <div class="panel col-4">
+          <h3>Core Strengths</h3>
+          <p>
+            • AI Workflow Automation<br/>
+            • CRM Data Accuracy<br/>
+            • Large-scale Excel Processing<br/>
+            • Cross-Functional Collaboration<br/>
+            • Requirement Mapping<br/>
+            • Leadership & Communication
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROJECTS -->
+    <section id="projects">
+      <div class="sec-head">
+        <h2>AI & Automation Projects</h2>
+        <p>Real-world projects that improved operations</p>
+      </div>
+
+      <div class="grid">
+
+        <article class="project col-4">
+          <h3>Microsoft Copilot — Email Summarization Automation</h3>
+          <p>
+            Designed and deployed Copilot agents that automatically summarize
+            long, multi-threaded email conversations—boosting team decision speed and reducing manual reading time.
+          </p>
+          <div class="tags">
+            <span class="tag">Copilot</span>
+            <span class="tag">AI Agents</span>
+            <span class="tag">Automation</span>
+          </div>
+        </article>
+
+        <article class="project col-4">
+          <h3>AI-Generated Excel Templates for CRM Updates</h3>
+          <p>
+            Built AI-driven Excel template creation workflows that automated high-volume printer
+            information updates into CRM databases—eliminating manual formatting and reducing processing delays.
+          </p>
+          <div class="tags">
+            <span class="tag">Excel Automation</span>
+            <span class="tag">CRM</span>
+            <span class="tag">AI</span>
+          </div>
+        </article>
+
+        <article class="project col-4">
+          <h3>CRM Data Quality & Integrity Enhancement</h3>
+          <p>
+            Led CRM database management, ensuring data accuracy, cleaning workflows,
+            and collaborating with cross-functional teams to improve system reliability.
+          </p>
+          <div class="tags">
+            <span class="tag">CRM Systems</span>
+            <span class="tag">SQL</span>
+            <span class="tag">Process Improvement</span>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- EXPERIENCE -->
+    <section id="experience">
+      <div class="sec-head">
+        <h2>Experience</h2>
+        <p>Technical & leadership roles</p>
+      </div>
+
+      <div class="grid">
+
+        <div class="panel col-6">
+          <h3>Timeline</h3>
+
+          <div class="timeline">
+
+            <div class="t-item">
+              <div class="t-when">2023 — Present</div>
+              <div class="t-what">
+                <strong>Project Lead – AI Automation</strong>
+                <span>
+                  Spearheaded Copilot agent deployment, AI workflow design,
+                  and CRM automation efforts for enterprise-level operations.
+                </span>
+              </div>
+            </div>
+
+            <div class="t-item">
+              <div class="t-when">2021 — 2023</div>
+              <div class="t-what">
+                <strong>CRM Management & Data Workflow Engineer</strong>
+                <span>
+                  Managed CRM databases, improved data quality, and collaborated with business units
+                  for process refinements and system enhancements.
+                </span>
+              </div>
+            </div>
+
+            <div class="t-item">
+              <div class="t-when">Earlier</div>
+              <div class="t-what">
+                <strong>Technical Roles & Support</strong>
+                <span>
+                  Built technical documentation, executed automation tasks, and
+                  supported large-scale data operations.
+                </span>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <div class="panel col-6">
+          <h3>Education & Certifications</h3>
+          <p>
+            • Bachelor of Science in Information Technology — University Name<br/>
+            • Certified Scrum Master (CSM) — Scrum Alliance<br/>
+            • Microsoft Copilot AI Integration Training
+          </p>
+          <p style="margin-top:10px">
+            <span class="tag">Continuous learning: AI, workflow automation, and data systems.</span>
+          </p>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact">
+      <div class="sec-head">
+        <h2>Contact</h2>
+        <p>Send a message directly to my inbox</p>
+      </div>
+
+      <div class="grid">
+        <div class="panel col-6">
+          <h3>Send a message</h3>
+          <form id="contactForm">
+            <div class="row">
+              <div>
+                <label>Name</label>
+                <input id="name" required placeholder="Your name" />
+              </div>
+              <div>
+                <label>Email</label>
+                <input id="email" type="email" required placeholder="you@email.com" />
+              </div>
+            </div>
+            <div>
+              <label>Message</label>
+              <textarea id="message" required placeholder="Tell me what you want to build..."></textarea>
+            </div>
+            <button class="btn primary" type="submit">Send</button>
+          </form>
+        </div>
+
+        <div class="panel col-6">
+          <h3>Links</h3>
+          <p>
+            <a class="link" href="https://github.com/" target="_blank">GitHub</a>
+            <a class="link" href="https://www.linkedin.com/" target="_blank">LinkedIn</a>
+            <a class="link" href="mailto:you@example.com">Email Me</a>
+          </p>
+        </div>
+      </div>
+
+      <div class="footer">
+        <span>© <span id="year"></span> Your Name</span>
+        <span style="font-family:var(--mono)">Built with HTML/CSS/JS</span>
+      </div>
+    </section>
+
+  </main>
+
+  <script>
+    // Theme
+    const themeBtn = document.getElementById("themeBtn");
+    const root = document.body;
+
+    const savedTheme = localStorage.getItem("portfolio_theme");
+    if (savedTheme) root.dataset.theme = savedTheme;
+
+    function updateThemeBtn(){
+      const light = root.dataset.theme === "light";
+      themeBtn.textContent = light ? "🌞" : "🌙";
+    }
+    updateThemeBtn();
+
+    themeBtn.addEventListener("click", () => {
+      root.dataset.theme = root.dataset.theme === "light" ? "dark" : "light";
+      localStorage.setItem("portfolio_theme", root.dataset.theme);
+      updateThemeBtn();
+    });
+
+    // Contact form mailto
+    const form = document.getElementById("contactForm");
+    form.addEventListener("submit", (e) => {
+      e.preventDefault();
+
+      const name = document.getElementById("name").value;
+      const email = document.getElementById("email").value;
+      const msg = document.getElementById("message").value;
+
+      window.location.href =
+        `mailto:you@example.com?subject=Message from ${encodeURIComponent(name)}&body=${encodeURIComponent("From: " + name + " (" + email + ")\n\n" + msg)}`;
+    });
+
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+
+</body>
+</html>
