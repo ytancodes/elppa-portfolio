@@ -1,0 +1,681 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="description" content="AI Project Lead specializing in Microsoft Copilot automation, CRM data workflows, and advanced process optimization." />
+  <meta name="theme-color" content="#0b1220" />
+  <meta property="og:title" content="Portfolio — AI Automation Project Lead" />
+  <meta property="og:description" content="Microsoft Copilot Automation Specialist • CRM Workflow Engineer • AI-driven process optimization." />
+  <meta property="og:type" content="website" />
+  <title>Portfolio — AI Automation Project Lead</title>
+
+  <style>
+    :root{
+      --bg:#0b1220;
+      --panel:#0f1a33;
+      --panel2:#0c1730;
+      --text:#e8eefc;
+      --muted:#a7b4d6;
+      --brand:#7c5cff;
+      --brand2:#34d399;
+      --border:rgba(255,255,255,.10);
+      --shadow: 0 18px 50px rgba(0,0,0,.35);
+      --radius:18px;
+      --mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+      --sans: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji","Segoe UI Emoji";
+    }
+    [data-theme="light"]{
+      --bg:#f6f8ff;
+      --panel:#ffffff;
+      --panel2:#ffffff;
+      --text:#0b1220;
+      --muted:#465173;
+      --brand:#5b4bff;
+      --brand2:#0ea5e9;
+      --border:rgba(10,15,25,.10);
+      --shadow: 0 18px 50px rgba(12,18,32,.12);
+    }
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{
+      margin:0;
+      background: radial-gradient(1200px 700px at 15% -10%, rgba(124,92,255,.35), transparent 55%),
+                  radial-gradient(900px 600px at 90% 0%, rgba(52,211,153,.22), transparent 60%),
+                  var(--bg);
+      color:var(--text);
+      font-family:var(--sans);
+      line-height:1.5;
+    }
+    a{color:inherit}
+    .wrap{max-width:1100px;margin:0 auto;padding:28px 18px 80px}
+
+    /* Topbar */
+    .topbar{
+      position:sticky;top:0;z-index:20;
+      backdrop-filter: blur(10px);
+      background: linear-gradient(to bottom, rgba(11,18,32,.88), rgba(11,18,32,.55));
+      border-bottom:1px solid var(--border);
+    }
+    [data-theme="light"] .topbar{
+      background: linear-gradient(to bottom, rgba(246,248,255,.92), rgba(246,248,255,.65));
+    }
+    .topbar .inner{
+      max-width:1100px;
+      margin:0 auto;
+      padding:14px 18px;
+      display:flex;
+      gap:14px;
+      align-items:center;
+      justify-content:space-between;
+    }
+    .brand{display:flex;gap:10px;align-items:center;text-decoration:none}
+    .logo{
+      width:38px;height:38px;border-radius:12px;
+      background: linear-gradient(135deg, var(--brand), var(--brand2));
+      box-shadow: 0 10px 24px rgba(124,92,255,.22);
+      display:grid;place-items:center;
+      font-weight:800;
+      letter-spacing:.5px;
+    }
+    .brand strong{font-size:14px}
+    .brand span{display:block;font-size:12px;color:var(--muted)}
+    nav{display:flex;gap:14px;align-items:center;flex-wrap:wrap;justify-content:flex-end}
+    nav a{
+      text-decoration:none;
+      font-size:13px;
+      color:var(--muted);
+      padding:8px 10px;
+      border-radius:12px;
+      transition:.18s transform,.18s background,.18s color;
+    }
+    nav a:hover{color:var(--text);background:rgba(124,92,255,.10);transform:translateY(-1px)}
+    .btn{
+      border:1px solid var(--border);
+      background:rgba(255,255,255,.06);
+      color:var(--text);
+      padding:9px 12px;
+      border-radius:14px;
+      font-size:13px;
+      cursor:pointer;
+      transition:.18s transform,.18s background,.18s border-color;
+      text-decoration:none;
+      display:inline-flex;
+      align-items:center;
+      gap:8px;
+    }
+    .btn:hover{transform:translateY(-1px);background:rgba(124,92,255,.14)}
+    .btn.primary{
+      border-color:transparent;
+      background:linear-gradient(135deg,rgba(124,92,255,.95),rgba(52,211,153,.90));
+      color:#06101f;
+      font-weight:700;
+    }
+
+    /* HERO */
+    .hero{
+      padding:54px 0 24px;
+      display:grid;
+      grid-template-columns:1.1fr .9fr;
+      gap:22px;
+      align-items:stretch;
+    }
+    @media(max-width:880px){ .hero{grid-template-columns:1fr} }
+    .card{
+      background:linear-gradient(180deg,rgba(255,255,255,.06),rgba(255,255,255,.03));
+      border:1px solid var(--border);
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+    }
+    .hero .left{padding:26px}
+    .kicker{
+      display:inline-flex;gap:10px;align-items:center;
+      font-family:var(--mono);font-size:12px;color:var(--muted);
+      padding:7px 10px;border-radius:999px;
+      border:1px solid var(--border);
+      background:rgba(255,255,255,.04);
+    }
+    .dot{width:9px;height:9px;border-radius:50%;background:var(--brand2)}
+    h1{margin:14px 0 10px;font-size:44px;line-height:1.06;letter-spacing:-.02em}
+    @media(max-width:520px){h1{font-size:36px}}
+    .lead{
+      color:var(--muted);
+      margin:0 0 18px;
+      font-size:15.5px;
+      max-width:60ch;
+    }
+    .cta{display:flex;gap:10px;flex-wrap:wrap;align-items:center}
+    .meta{margin-top:18px;display:flex;flex-wrap:wrap;gap:10px;color:var(--muted);font-size:13px}
+    .pill{padding:7px 10px;border-radius:999px;border:1px solid var(--border);background:rgba(255,255,255,.04)}
+
+    .hero .right{padding:18px;display:grid;gap:12px}
+    .profile{
+      display:grid;grid-template-columns:92px 1fr;gap:14px;
+      padding:14px;border-radius:16px;border:1px solid var(--border);
+      background:rgba(255,255,255,.04);
+    }
+    .avatar{
+      width:92px;height:92px;border-radius:16px;
+      background:linear-gradient(135deg,rgba(124,92,255,.95),rgba(52,211,153,.85));
+      display:grid;place-items:center;
+      font-size:18px;font-weight:800;color:#06101f;
+    }
+    .quick{padding:14px;border-radius:16px;border:1px solid var(--border);background:rgba(255,255,255,.03)}
+    .chips{display:flex;gap:8px;flex-wrap:wrap}
+    .chip{
+      font-size:12.5px;
+      padding:7px 10px;
+      border-radius:999px;
+      border:1px solid var(--border);
+      background:rgba(124,92,255,.12);
+    }
+
+    /* Sections */
+    section{padding:26px 0 0}
+    .sec-head{display:flex;justify-content:space-between;align-items:baseline;margin:34px 0 14px;gap:14px;flex-wrap:wrap}
+    .sec-head p{margin:0;color:var(--muted)}
+    .grid{display:grid;grid-template-columns:repeat(12,1fr);gap:14px}
+    .col-6{grid-column:span 6}
+    .col-4{grid-column:span 4}
+    .col-8{grid-column:span 8}
+    .col-12{grid-column:span 12}
+    @media(max-width:900px){
+      .col-6,.col-4,.col-8{grid-column:span 12}
+    }
+    .panel{padding:16px;border-radius:18px;border:1px solid var(--border);background:rgba(255,255,255,.03)}
+
+    /* Projects */
+    .project{
+      padding:16px;
+      border-radius:18px;
+      border:1px solid var(--border);
+      background:linear-gradient(180deg,rgba(255,255,255,.05),rgba(255,255,255,.02));
+      position:relative;
+      overflow:hidden;
+      transition: transform .18s ease, border-color .18s ease;
+    }
+    .project:hover{transform:translateY(-2px);border-color:rgba(124,92,255,.38)}
+    .tags{display:flex;gap:8px;flex-wrap:wrap;margin-top:10px}
+    .tag{font-size:12px;padding:6px 9px;border-radius:999px;border:1px solid var(--border);background:rgba(255,255,255,.03)}
+
+    /* Timeline */
+    .timeline{display:grid;gap:12px}
+    .t-item{display:grid;grid-template-columns:140px 1fr;gap:12px}
+    @media(max-width:520px){.t-item{grid-template-columns:1fr}}
+    .t-when{color:var(--muted);font-family:var(--mono);font-size:12px}
+    .t-what{padding:12px 14px;border:1px solid var(--border);border-radius:16px;background:rgba(255,255,255,.03)}
+    .t-what strong{display:block;margin-bottom:6px}
+    .t-what span{display:block;color:var(--muted)}
+
+    /* Contact */
+    form{display:grid;gap:10px}
+    .row{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+    @media(max-width:640px){.row{grid-template-columns:1fr}}
+    label{display:block;font-size:13px;color:var(--muted);margin-bottom:6px}
+    input, textarea{
+      width:100%;
+      padding:12px;
+      border-radius:14px;
+      border:1px solid var(--border);
+      background:rgba(255,255,255,.04);
+      color:var(--text);
+      font-family:inherit;
+      font-size:14px;
+    }
+    textarea{min-height:120px;resize:vertical}
+    input:focus,textarea:focus{
+      outline:none;
+      border-color:rgba(124,92,255,.55);
+      box-shadow:0 0 0 4px rgba(124,92,255,.18);
+    }
+    .link{
+      text-decoration:none;
+      font-size:13px;
+      color:var(--text);
+      border:1px solid var(--border);
+      padding:8px 10px;
+      border-radius:12px;
+      background:rgba(255,255,255,.04);
+      transition:.18s transform,.18s background,.18s border-color;
+      display:inline-flex;
+      gap:8px;
+      align-items:center;
+      margin-right:6px;
+      margin-top:6px;
+    }
+    .link:hover{
+      transform:translateY(-1px);
+      background:rgba(52,211,153,.12);
+      border-color:rgba(52,211,153,.38);
+    }
+    .footer{
+      margin-top:30px;
+      padding-top:18px;
+      border-top:1px solid var(--border);
+      display:flex;
+      justify-content:space-between;
+      color:var(--muted);
+      font-size:13px;
+      flex-wrap:wrap;
+      gap:10px;
+    }
+    .sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0)}
+  </style>
+</head>
+
+<body data-theme="dark">
+  <header class="topbar">
+    <div class="inner">
+      <a class="brand" href="#top">
+        <div class="logo">AI</div>
+        <div>
+          <strong>AI Automation Lead</strong>
+          <span>Portfolio</span>
+        </div>
+      </a>
+
+      <nav>
+        <a href="#about">About</a>
+        <a href="#projects">Projects</a>
+        <a href="#experience">Experience</a>
+        <a href="#education">Education</a>
+        <a href="#awards">Awards</a>
+        <a href="#contact">Contact</a>
+        <button id="themeBtn" class="btn" type="button" aria-label="Toggle theme">🌓</button>
+        <a class="btn primary" href="#contact">Hire me</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="top" class="wrap">
+    <!-- HERO -->
+    <section class="hero" aria-label="Hero">
+      <div class="card left">
+        <div class="kicker">
+          <span class="dot" aria-hidden="true"></span>
+          <span>AI Automation + CRM Systems</span>
+        </div>
+
+        <h1>
+          Hi, I’m
+          <span style="background:linear-gradient(135deg,var(--brand),var(--brand2));-webkit-background-clip:text;color:transparent">
+            Jonathan Zamoras
+          </span>.
+        </h1>
+
+        <p class="lead">
+          AI Automation Specialist and Central Site Operations professional with 11+ years of experience at
+          Lexmark Research &amp; Development Corporation. I build Microsoft Copilot agents, CRM workflows, QA
+          testing solutions, and operational reporting systems that cut manual effort and improve data accuracy.
+        </p>
+
+        <div class="cta">
+          <a class="btn primary" href="#projects">See projects</a>
+          <a class="btn" href="#contact">Contact</a>
+          <a class="btn" target="_blank" rel="noreferrer" href="https://github.com/">GitHub</a>
+          <a class="btn" target="_blank" rel="noreferrer" href="https://www.linkedin.com/in/itan8888">LinkedIn</a>
+        </div>
+
+        <div class="meta">
+          <span class="pill">📍 Philippines</span>
+          <span class="pill">💼 AI / Automation / CRM</span>
+          <span class="pill">⚡ Workflow &amp; Ops</span>
+        </div>
+      </div>
+
+      <aside class="card right" aria-label="Quick profile">
+        <div class="profile">
+          <div class="avatar" aria-hidden="true">JZ</div>
+          <div>
+            <h2 style="margin:0 0 6px;">Jonathan Zamoras</h2>
+            <p style="margin:0;color:var(--muted);font-size:14px;">
+              <strong style="color:var(--text);">Role:</strong> AI Automation Specialist / CSOS<br/>
+              <strong style="color:var(--text);">Email:</strong> ytaniosxr@gmail.com<br/>
+              <strong style="color:var(--text);">Focus:</strong> Copilot Agents, CRM Data, Reporting, Testing
+            </p>
+          </div>
+        </div>
+
+        <div class="quick">
+          <h3 style="margin:0 0 10px;">Skills</h3>
+          <div class="chips">
+            <span class="chip">Microsoft Copilot</span>
+            <span class="chip">CRM Systems</span>
+            <span class="chip">Excel Automation</span>
+            <span class="chip">SQL</span>
+            <span class="chip">Google BigQuery</span>
+            <span class="chip">Firebase</span>
+            <span class="chip">Manual &amp; Automated Testing</span>
+            <span class="chip">Reporting</span>
+          </div>
+        </div>
+
+        <div class="quick">
+          <h3 style="margin:0 0 10px;">Highlights</h3>
+          <div class="chips">
+            <span class="chip">Email Summarization Automation</span>
+            <span class="chip">Excel Template AI Generator</span>
+            <span class="chip">CRM Data Integrity Boost</span>
+            <span class="chip">Cross-functional Collaboration</span>
+          </div>
+        </div>
+      </aside>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about" aria-label="About">
+      <div class="sec-head">
+        <h2 style="margin:0;">About</h2>
+        <p>Professional background &amp; mission</p>
+      </div>
+
+      <div class="grid">
+        <div class="panel col-8">
+          <h3 style="margin:0 0 10px;">Professional Summary</h3>
+          <p style="margin:0 0 10px;">
+            I am an AI Automation Specialist and Central Site Operations professional with 11+ years of experience at
+            <strong>Lexmark Research &amp; Development Corporation</strong>. My work spans Microsoft Copilot agent development,
+            CRM workflow design, QA testing, customer operations, reporting, and enterprise data management.
+          </p>
+          <p style="margin:0 0 10px;">
+            I specialize in transforming manual, repetitive work into intelligent automated workflows — from generating Excel
+            templates for high-volume CRM ingestion to deploying AI summarization systems that reduce decision-making time for teams.
+          </p>
+          <p style="margin:0;">
+            I bring expertise in problem-solving, cross-functional collaboration, operations management, and technical execution across
+            automation, testing, and customer-facing service environments.
+          </p>
+        </div>
+
+        <div class="panel col-4">
+          <h3 style="margin:0 0 10px;">Core Strengths</h3>
+          <p style="margin:0;color:var(--muted);">
+            • AI Workflow Automation<br/>
+            • Microsoft Copilot Agent Design<br/>
+            • Manual &amp; Automated Testing<br/>
+            • CRM Data Management<br/>
+            • Customer Operations<br/>
+            • Reporting &amp; Documentation<br/>
+            • Cross-Functional Collaboration<br/>
+            • Enterprise Process Optimization
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROJECTS -->
+    <section id="projects" aria-label="Projects">
+      <div class="sec-head">
+        <h2 style="margin:0;">Projects</h2>
+        <p>Web applications &amp; automation tools</p>
+      </div>
+
+      <div class="grid">
+        <article class="project col-6">
+          <h3 style="margin:0 0 10px;">Expense Tracker (HTML) — Oct 2023 to Present</h3>
+          <p style="margin:0;color:var(--muted);">
+            A lightweight web-based expense tracker capable of recording, editing, exporting, printing, and resetting expenses.
+            Supports JSON export/import for multi-session use and can run standalone or embedded in other websites.
+          </p>
+          <div class="tags">
+            <span class="tag">HTML</span>
+            <span class="tag">CSS</span>
+            <span class="tag">JavaScript</span>
+          </div>
+        </article>
+
+        <article class="project col-6">
+          <h3 style="margin:0 0 10px;">Online Cash Register — Oct 2023 to Present</h3>
+          <p style="margin:0;color:var(--muted);">
+            A browser-based POS system supporting product lookup by 4-digit codes, cart management, invoice printing, cash handling,
+            and session-based sales tracking. Automates register operations and updates cash-on-hand for subsequent sessions.
+          </p>
+          <div class="tags">
+            <span class="tag">Cash Management</span>
+            <span class="tag">Sales Tracking</span>
+            <span class="tag">JavaScript</span>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- EXPERIENCE -->
+    <section id="experience" aria-label="Experience">
+      <div class="sec-head">
+        <h2 style="margin:0;">Experience</h2>
+        <p>11+ years of enterprise experience</p>
+      </div>
+
+      <div class="grid">
+        <div class="panel col-12">
+          <h3 style="margin:0 0 6px;">Lexmark Research &amp; Development Corporation</h3>
+          <p style="color:var(--muted);margin:0 0 14px;">Full-time · 11 yrs 5 mos</p>
+
+          <div class="timeline">
+            <div class="t-item">
+              <div class="t-when">Apr 2019 – Present</div>
+              <div class="t-what">
+                <strong>Central Site Operations Specialist</strong>
+                <span>
+                  Customer-facing role supporting Managed Services under the Client SOW. Works with Customer Operations Managers,
+                  partners, and internal Lexmark teams to execute steady-state services, escalate issues, deliver customer reports,
+                  and ensure client satisfaction.
+                </span>
+                <span style="margin-top:6px;">
+                  Responsibilities include service delivery execution, escalation management, operational reporting, data analysis,
+                  and being a key resource for resolving business process and service issues.
+                </span>
+              </div>
+            </div>
+
+            <div class="t-item">
+              <div class="t-when">Jul 2022 – May 2024</div>
+              <div class="t-what">
+                <strong>Test Engineer</strong>
+                <span>
+                  Designed functional, reliability, performance, security, and usability tests for customer-facing functions.
+                  Performed requirements analysis, created and executed test cases (manual &amp; automated), tracked issues,
+                  improved test coverage, and supported risk mitigation strategies.
+                </span>
+              </div>
+            </div>
+
+            <div class="t-item">
+              <div class="t-when">Aug 2014 – Apr 2019</div>
+              <div class="t-what">
+                <strong>Asset Management &amp; Invoicing Specialist</strong>
+                <span>
+                  Managed customer asset data in ARMS to ensure timely consumables delivery for MPS customers.
+                  Generated accurate billing details, supported customer account rollouts, ensured contract compliance,
+                  and consistently performed above KPI standards.
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="panel col-12">
+          <h3 style="margin:0 0 6px;">Earlier Professional Roles</h3>
+          <p style="margin:0 0 14px;color:var(--muted);">Condensed overview of earlier experience</p>
+
+          <div class="timeline">
+            <div class="t-item">
+              <div class="t-when">Nov 2009 – Jul 2014</div>
+              <div class="t-what">
+                <strong>Team Lead — Banking Operations · AEGIS People Support</strong>
+                <span>Led a team supporting a North American bank, handling financial inquiries and solutions.</span>
+              </div>
+            </div>
+
+            <div class="t-item">
+              <div class="t-when">Jun 2009 – Nov 2009</div>
+              <div class="t-what">
+                <strong>Customer Service Associate · Convergys</strong>
+                <span>Provided billing support, service upgrades, and mobile solutions.</span>
+              </div>
+            </div>
+
+            <div class="t-item">
+              <div class="t-when">Jan 2008 – Jun 2009</div>
+              <div class="t-what">
+                <strong>Technical Support Engineer · Sykes Asia</strong>
+                <span>Technical support for antivirus software; troubleshooting both hardware and software issues.</span>
+              </div>
+            </div>
+
+            <div class="t-item">
+              <div class="t-when">Aug 2007 – Nov 2007</div>
+              <div class="t-what">
+                <strong>Customer Service Representative · ePLDT Ventus</strong>
+                <span>Provided support for a US-based satellite TV provider through phone troubleshooting.</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- EDUCATION -->
+    <section id="education" aria-label="Education">
+      <div class="sec-head">
+        <h2 style="margin:0;">Education</h2>
+        <p>Academic background</p>
+      </div>
+
+      <div class="grid">
+        <div class="panel col-6">
+          <h3 style="margin:0 0 6px;">Mindanao State University</h3>
+          <span style="color:var(--muted);">
+            Bachelor of Science in Electrical, Electronics &amp; Communications Engineering
+          </span>
+          <p style="margin:10px 0 0;color:var(--muted);">
+            <strong style="color:var(--text);">Years:</strong> Jun 2001 – Nov 2006<br/>
+            <strong style="color:var(--text);">CGPA:</strong> 1.74<br/>
+            <strong style="color:var(--text);">Activities:</strong> KAPARIZ, JIECEP
+          </p>
+        </div>
+
+        <div class="panel col-6">
+          <h3 style="margin:0 0 6px;">Galas National High School</h3>
+          <span style="color:var(--muted);">Secondary Education</span>
+          <p style="margin:10px 0 0;color:var(--muted);">
+            <strong style="color:var(--text);">Years:</strong> Jun 1997 – Mar 2001<br/>
+            <strong style="color:var(--text);">Honors:</strong> Salutatorian (2001)<br/>
+            <strong style="color:var(--text);">Leadership:</strong> Battalion Commander (CAT), SSC President
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- AWARDS -->
+    <section id="awards" aria-label="Awards">
+      <div class="sec-head">
+        <h2 style="margin:0;">Awards &amp; Achievements</h2>
+        <p>Recognition &amp; certifications</p>
+      </div>
+
+      <div class="grid">
+        <div class="panel col-12">
+          <h3 style="margin:0 0 6px;">Top Tester, CrowdTesters Worldwide</h3>
+          <p style="color:var(--muted);margin:0 0 18px;">Issued by Global App Testing · Sep 2019</p>
+
+          <h3 style="margin:0 0 6px;">Tester, Silver Badge</h3>
+          <p style="color:var(--muted);margin:0;">Issued by UTest · Apr 2018</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" aria-label="Contact">
+      <div class="sec-head">
+        <h2 style="margin:0;">Contact</h2>
+        <p>Get in touch</p>
+      </div>
+
+      <div class="grid">
+        <div class="panel col-6">
+          <h3 style="margin:0 0 10px;">Send a message</h3>
+          <form id="contactForm">
+            <div class="row">
+              <div>
+                <label for="name">Name</label>
+                <input id="name" name="name" autocomplete="name" required placeholder="Your name" />
+              </div>
+
+              <div>
+                <label for="email">Email</label>
+                <input id="email" name="email" type="email" autocomplete="email" required placeholder="your@email.com" />
+              </div>
+            </div>
+
+            <div>
+              <label for="message">Message</label>
+              <textarea id="message" name="message" required placeholder="Your message here..."></textarea>
+            </div>
+
+            <button class="btn primary" type="submit">Send Message</button>
+            <p id="formHint" class="sr-only" aria-live="polite"></p>
+          </form>
+        </div>
+
+        <div class="panel col-6">
+          <h3 style="margin:0 0 10px;">Other ways</h3>
+          <p style="margin:0;">
+            <a class="link" href="mailto:ytaniosxr@gmail.com">Email</a>
+            <a class="link" href="https://www.linkedin.com/in/itan8888" target="_blank" rel="noreferrer">LinkedIn</a>
+            <a class="link" href="https://github.com/" target="_blank" rel="noreferrer">GitHub</a>
+          </p>
+        </div>
+      </div>
+
+      <div class="footer">
+        <span>© <span id="year"></span> Jonathan Zamoras</span>
+        <span style="font-family:var(--mono)">Built with HTML • CSS • JavaScript</span>
+      </div>
+    </section>
+  </main>
+
+  <script>
+    // Theme toggle
+    const themeBtn = document.getElementById("themeBtn");
+    const root = document.body;
+
+    const saved = localStorage.getItem("portfolio_theme");
+    if (saved === "light" || saved === "dark") root.dataset.theme = saved;
+
+    function syncThemeButton() {
+      const isLight = root.dataset.theme === "light";
+      themeBtn.textContent = isLight ? "🌞" : "🌙";
+    }
+    syncThemeButton();
+
+    themeBtn.addEventListener("click", () => {
+      root.dataset.theme = (root.dataset.theme === "light") ? "dark" : "light";
+      localStorage.setItem("portfolio_theme", root.dataset.theme);
+      syncThemeButton();
+    });
+
+    // Contact Form -> mailto:
+    const form = document.getElementById("contactForm");
+    const hint = document.getElementById("formHint");
+
+    form.addEventListener("submit", (e) => {
+      e.preventDefault();
+
+      const name = document.getElementById("name").value.trim();
+      const email = document.getElementById("email").value.trim();
+      const msg = document.getElementById("message").value.trim();
+
+      const subject = encodeURIComponent(`Message from ${name || "Website Visitor"}`);
+      const body = encodeURIComponent(`From: ${name} (${email})\n\n${msg}`);
+
+      const to = "ytaniosxr@gmail.com";
+
+      hint.textContent = "Opening your email app…";
+      window.location.href = `mailto:${to}?subject=${subject}&body=${body}`;
+    });
+
+    document.getElementById("year").textContent = String(new Date().getFullYear());
+  </script>
+</body>
+</html>
